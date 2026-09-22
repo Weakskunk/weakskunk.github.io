@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lucas Offroy — PhD Student, Interpretability & Algorithmic Fairness</title>
+<meta name="description" content="Academic site of Lucas Offroy, PhD student at UQAM working on functional decompositions and fairness of forecasting models — projects, publications, talks and activities.">
+
+<!--
+  =====================================================================
+  ONE THING LEFT TO CUSTOMIZE:
+  [PHOTO] -> replace the .avatar block (search that tag) with a real <img>
+  This site is now split across several pages (index.html, projects.html,
+  publications.html, talks.html, activities.html, resume.html) sharing
+  style.css and script.js — edit each page's content directly.
+  =====================================================================
+-->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="cursor-dot"></div>
+<div id="cursor-trail-1"></div>
+<div id="cursor-trail-2"></div>
+<div id="cursor-frame">
+  <div class="frame-inner">
+    <span class="corner tl"></span>
+    <span class="corner tr"></span>
+    <span class="corner bl"></span>
+    <span class="corner br"></span>
+  </div>
+</div>
+<canvas id="constellation"></canvas>
+
+<header>
+  <nav class="wrap">
+    <a href="index.html" class="logo">
+      <span class="logo-mark">LO</span>
+      Lucas Offroy
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="publications.html">Publications</a></li>
+      <li><a href="talks.html">Talks</a></li>
+      <li><a href="activities.html">Activities</a></li>
+      <li><a href="resume.html">Resume</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button class="nav-toggle" id="navToggle" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+</header>
+
+<!-- ===================== HOME ===================== -->
+<section class="hero wrap" id="home">
+  <div class="hero-text">
+    <p class="eyebrow-role">PhD Student · Interpretability &amp; Algorithmic Fairness · UQAM, Montreal</p>
+    <h1>Hi, I'm<br><span>Lucas Offroy</span></h1>
+
+    <div class="bb-wrap">
+      <div class="bb-stage" id="blackbox" role="button" tabindex="0" aria-expanded="false"
+           aria-label="Open the black box to reveal the Hoeffding decomposition">
+        <div class="bb-glow"></div>
+        <div class="bb-cube">
+          <div class="bb-face bb-front"></div>
+          <div class="bb-face bb-right"></div>
+          <div class="bb-face bb-left"></div>
+          <div class="bb-face bb-lid"></div>
+        </div>
+        <div class="bb-reveal">
+          <div class="equation">
+            f(x) = <span class="sum-stack"><span class="sum-symbol">Σ</span><span class="sum-sub">u⊆D</span></span> f<sub>u</sub>(x<sub>u</sub>)
+          </div>
+          <div class="equation-caption">the functional decomposition behind my thesis</div>
+        </div>
+      </div>
+    </div>
+    <p class="bb-quote">“My job is to open the black-box.”</p>
+
+    <p class="bio">
+      My PhD, <strong>“Functional Decompositions and Fairness of Forecasting Models”</strong>, builds on my work on black-box model interpretability through cooperative game theory and functional analysis decomposition.
+      I hold an MSc in Actuarial Science from EURIA and an engineering degree in Applied Mathematics from INSA Rennes, with an exchange year at KAIST.
+      This site gathers my research projects, publications, and talks.
+    </p>
+    <div class="cta-row">
+      <a href="#contact" class="btn">Get in touch</a>
+      <div class="social-row">
+        <a href="https://www.linkedin.com/in/lucas-offroy-559226217/" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24"><path d="M4.98 3.5C4.98 4.88 3.94 6 2.5 6S0 4.88 0 3.5 1.06 1 2.5 1 4.98 2.12 4.98 3.5zM.5 8h4V23h-4V8zm7.5 0h3.8v2.05h.05c.53-1 1.83-2.05 3.77-2.05C19.9 8 21 10.1 21 13.4V23h-4v-8.2c0-1.95-.03-4.45-2.7-4.45-2.7 0-3.1 2.1-3.1 4.3V23h-4V8z"/></svg>
+        </a>
+        <a href="https://orcid.org/0009-0003-3294-0937" target="_blank" rel="noopener" aria-label="ORCID">
+          <svg viewBox="0 0 24 24"><path d="M12 0C5.372 0 0 5.372 0 12s5.372 12 12 12 12-5.372 12-12S18.628 0 12 0zM7.369 4.378c.888 0 1.604.717 1.604 1.604 0 .888-.716 1.605-1.604 1.605-.887 0-1.604-.717-1.604-1.605 0-.887.717-1.604 1.604-1.604zm-1.29 5.297h2.58v10.335h-2.58V9.675zm4.694 0h4.276c4.11 0 5.837 2.938 5.837 5.176 0 2.431-1.905 5.159-5.837 5.159h-4.276V9.675zm2.582 2.269v6.026h1.6c2.294 0 3.336-1.617 3.336-3.021 0-1.635-1.226-3.005-3.336-3.005h-1.6z"/></svg>
+        </a>
+        <a href="mailto:lucasoffroy@gmail.com" aria-label="Email">
+          <svg viewBox="0 0 24 24"><path d="M2 4h20a2 2 0 012 2v12a2 2 0 01-2 2H2a2 2 0 01-2-2V6a2 2 0 012-2zm0 2v.01L12 13 22 6.01V6H2zm20 3.24l-9.34 6.6a1 1 0 01-1.16 0L2 9.24V18h20V9.24z"/></svg>
+        </a>
+        <a href="https://github.com/Weakskunk/" target="_blank" rel="noopener" aria-label="GitHub">
+          <svg viewBox="0 0 24 24"><path d="M12 .5C5.73.5.5 5.74.5 12.02c0 5.02 3.26 9.28 7.78 10.78.57.1.78-.25.78-.55v-2.15c-3.16.69-3.83-1.36-3.83-1.36-.52-1.32-1.26-1.67-1.26-1.67-1.03-.7.08-.69.08-.69 1.14.08 1.74 1.17 1.74 1.17 1.01 1.74 2.65 1.24 3.3.95.1-.73.4-1.24.72-1.53-2.52-.29-5.17-1.26-5.17-5.6 0-1.24.44-2.25 1.16-3.04-.12-.29-.5-1.44.11-3 0 0 .95-.3 3.12 1.16a10.8 10.8 0 015.68 0c2.17-1.46 3.12-1.16 3.12-1.16.61 1.56.23 2.71.11 3 .72.79 1.16 1.8 1.16 3.04 0 4.35-2.66 5.31-5.19 5.59.41.35.77 1.04.77 2.11v3.13c0 .3.21.66.79.55A10.53 10.53 0 0023.5 12c0-6.28-5.23-11.5-11.5-11.5z"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-photo">
+    <div class="avatar-wrap">
+      <div class="avatar">
+        <!-- Drop a file named photo.jpg next to index.html and it will
+             appear automatically here, replacing the "LO" initials. -->
+        LO
+        <img src="photo.jpg" alt="Lucas Offroy" class="avatar-photo" onerror="this.style.display='none'">
+        <span class="avatar-node n1"></span>
+        <span class="avatar-node n2"></span>
+        <span class="avatar-node n3"></span>
+      </div>
+      <div class="orbit" style="animation-delay:0s">
+        <span class="concept-chip" style="animation-delay:0s">Interpretability</span>
+      </div>
+      <div class="orbit" style="animation-delay:-8.5s">
+        <span class="concept-chip" style="animation-delay:-8.5s">Fairness</span>
+      </div>
+      <div class="orbit" style="animation-delay:-17s">
+        <span class="concept-chip" style="animation-delay:-17s">Functional decomposition</span>
+      </div>
+      <div class="orbit" style="animation-delay:-25.5s">
+        <span class="concept-chip" style="animation-delay:-25.5s">Game theory</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-news">
+    <p class="news-label">News</p>
+    <div class="news-item">
+      <div class="news-date">January 2026</div>
+      <div class="news-text">Co-presented a workshop on ML interpretability at EURIA Graduate School, Brest.</div>
+    </div>
+    <div class="news-item">
+      <div class="news-date">2025 – 2026</div>
+      <div class="news-text">Part-time internship at Nexialog Consulting on fair natural-catastrophe recognition mechanisms.</div>
+    </div>
+    <div class="news-item">
+      <div class="news-date">2025</div>
+      <div class="news-text">Research assistantship at UQAM on interpretability of black-box models.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CONTACT / FOOTER ===================== -->
+<footer id="contact">
+  <div class="wrap">
+    <h2>Let's get in touch</h2>
+    <p>Feel free to reach out about my research, a possible collaboration, or a speaking invitation on interpretability and algorithmic fairness.</p>
+    <div class="cta-row">
+      <a href="mailto:lucasoffroy@gmail.com" class="btn">lucasoffroy@gmail.com</a>
+      <div class="social-row">
+        <a href="https://www.linkedin.com/in/lucas-offroy-559226217/" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24"><path d="M4.98 3.5C4.98 4.88 3.94 6 2.5 6S0 4.88 0 3.5 1.06 1 2.5 1 4.98 2.12 4.98 3.5zM.5 8h4V23h-4V8zm7.5 0h3.8v2.05h.05c.53-1 1.83-2.05 3.77-2.05C19.9 8 21 10.1 21 13.4V23h-4v-8.2c0-1.95-.03-4.45-2.7-4.45-2.7 0-3.1 2.1-3.1 4.3V23h-4V8z"/></svg>
+        </a>
+        <a href="https://orcid.org/0009-0003-3294-0937" target="_blank" rel="noopener" aria-label="ORCID">
+          <svg viewBox="0 0 24 24"><path d="M12 0C5.372 0 0 5.372 0 12s5.372 12 12 12 12-5.372 12-12S18.628 0 12 0zM7.369 4.378c.888 0 1.604.717 1.604 1.604 0 .888-.716 1.605-1.604 1.605-.887 0-1.604-.717-1.604-1.605 0-.887.717-1.604 1.604-1.604zm-1.29 5.297h2.58v10.335h-2.58V9.675zm4.694 0h4.276c4.11 0 5.837 2.938 5.837 5.176 0 2.431-1.905 5.159-5.837 5.159h-4.276V9.675zm2.582 2.269v6.026h1.6c2.294 0 3.336-1.617 3.336-3.021 0-1.635-1.226-3.005-3.336-3.005h-1.6z"/></svg>
+        </a>
+        <a href="https://github.com/Weakskunk/" target="_blank" rel="noopener" aria-label="GitHub">
+          <svg viewBox="0 0 24 24"><path d="M12 .5C5.73.5.5 5.74.5 12.02c0 5.02 3.26 9.28 7.78 10.78.57.1.78-.25.78-.55v-2.15c-3.16.69-3.83-1.36-3.83-1.36-.52-1.32-1.26-1.67-1.26-1.67-1.03-.7.08-.69.08-.69 1.14.08 1.74 1.17 1.74 1.17 1.01 1.74 2.65 1.24 3.3.95.1-.73.4-1.24.72-1.53-2.52-.29-5.17-1.26-5.17-5.6 0-1.24.44-2.25 1.16-3.04-.12-.29-.5-1.44.11-3 0 0 .95-.3 3.12 1.16a10.8 10.8 0 015.68 0c2.17-1.46 3.12-1.16 3.12-1.16.61 1.56.23 2.71.11 3 .72.79 1.16 1.8 1.16 3.04 0 4.35-2.66 5.31-5.19 5.59.41.35.77 1.04.77 2.11v3.13c0 .3.21.66.79.55A10.53 10.53 0 0023.5 12c0-6.28-5.23-11.5-11.5-11.5z"/></svg>
+        </a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Lucas Offroy</span>
+      <span>Designed &amp; built from scratch</span>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
