@@ -28,7 +28,14 @@
 <header>
   <nav class="wrap">
     <a href="index.html" class="logo">
-      <span class="logo-mark">LO</span>
+      <span class="logo-mark" aria-hidden="true">
+        <span class="logo-cube">
+          <span class="logo-face logo-front"></span>
+          <span class="logo-face logo-right"></span>
+          <span class="logo-face logo-left"></span>
+          <span class="logo-face logo-top"></span>
+        </span>
+      </span>
       Lucas Offroy
     </a>
     <ul class="nav-links" id="navLinks">
@@ -56,11 +63,13 @@
          aria-label="Open the black box to see where I'm speaking next">
       <div class="bb-glow"></div>
       <div class="bb-cube">
-        <div class="bb-face bb-front"></div>
-        <div class="bb-face bb-right"></div>
-        <div class="bb-face bb-left"></div>
-        <div class="bb-face bb-lid"></div>
-      </div>
+            <div class="bb-face bb-front"></div>
+            <div class="bb-face bb-right"></div>
+            <div class="bb-face bb-left"></div>
+            <div class="bb-face bb-lid"></div>
+            <div class="bb-face bb-back"></div>
+            <div class="bb-face bb-bottom"></div>
+        </div>
       <div class="bb-reveal">
         <div class="bb-teaser-label">Speaking next</div>
         <div class="bb-teaser-title">To Be Determined</div>
@@ -74,6 +83,19 @@
 <section class="section" id="talks">
   <div class="wrap">
     <div class="timeline">
+    <div class="timeline-item">
+  <div class="timeline-date">November 2026</div>
+  <div class="timeline-title">
+    <a href="slides/maer2026-slides.pdf" target="_blank" rel="noopener noreferrer">
+      Modeling Clay Shrink-Swell Risk: Giving Risk Models Their Memory Back
+    </a>
+  </div>
+  <div class="timeline-place">
+    <a href="https://thomaspeyrat.github.io/Merida_2026.github.io/index.html" target="_blank" rel="noopener noreferrer">
+      Mathematical Advances on Emerging Risks 2026 (MAER 2026)
+    </a> · Facultad de Arquitectura, Universidad Autónoma de Yucatán, Mérida, México
+  </div>
+</div>
       <div class="timeline-item">
         <div class="timeline-date">January 2026</div>
         <div class="timeline-title">Interprétabilité des modèles de Machine Learning — co-presented with Agathe Fernandes-Machado (UQAM)</div>

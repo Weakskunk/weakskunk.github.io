@@ -40,7 +40,7 @@
 }
 </script>
 </head>
-<body>
+<body id="page-home">
 
 <div id="cursor-dot"></div>
 <div id="cursor-trail-1"></div>
@@ -58,7 +58,14 @@
 <header>
   <nav class="wrap">
     <a href="index.html" class="logo">
-      <span class="logo-mark">LO</span>
+      <span class="logo-mark" aria-hidden="true">
+        <span class="logo-cube">
+          <span class="logo-face logo-front"></span>
+          <span class="logo-face logo-right"></span>
+          <span class="logo-face logo-left"></span>
+          <span class="logo-face logo-top"></span>
+        </span>
+      </span>
       Lucas Offroy
     </a>
     <ul class="nav-links" id="navLinks">
@@ -84,26 +91,56 @@
 
     <div class="bb-wrap">
       <div class="bb-stage" id="blackbox" role="button" tabindex="0" aria-expanded="false"
-           aria-label="Open the black box to reveal the Hoeffding decomposition">
+           aria-label="Open the black box to see why the model says duck">
         <div class="bb-glow"></div>
         <div class="bb-cube">
           <div class="bb-face bb-front"></div>
           <div class="bb-face bb-right"></div>
           <div class="bb-face bb-left"></div>
           <div class="bb-face bb-lid"></div>
+          <div class="bb-face bb-back"></div>
+          <div class="bb-face bb-bottom"></div>
         </div>
         <div class="bb-reveal">
-          <div class="equation">
-            f(x) = <span class="sum-stack"><span class="sum-symbol">Σ</span><span class="sum-sub">u⊆D</span></span> f<sub>u</sub>(x<sub>u</sub>)
+          <div class="bb-netdiagram">
+            <svg viewBox="0 0 150 100" aria-hidden="true">
+              <!-- inside the opened box: three units -->
+              <rect class="bb-inbox" x="76" y="16" width="30" height="68" rx="6"/>
+
+              <!-- what the photo feeds into them -->
+              <path class="bb-edge" d="M60,36 C72,36 76,30 86.5,30"/>
+              <path class="bb-edge" d="M60,50 L86.5,50"/>
+              <path class="bb-edge" d="M60,64 C72,64 76,70 86.5,70"/>
+
+              <circle class="bb-halo" cx="91" cy="30" r="8"/>
+              <circle class="bb-halo" cx="91" cy="50" r="8"/>
+              <circle class="bb-halo" cx="91" cy="70" r="8"/>
+              <circle class="bb-lamp" cx="91" cy="30" r="4.2"/>
+              <circle class="bb-lamp" cx="91" cy="50" r="4.2"/>
+              <circle class="bb-lamp" cx="91" cy="70" r="4.2"/>
+
+              <!-- ...and together they give the answer -->
+              <path class="bb-edge" d="M95.5,30 C106,30 106,49 114,49.5"/>
+              <path class="bb-edge" d="M95.5,50 L114,50"/>
+              <path class="bb-edge" d="M95.5,70 C106,70 106,51 114,50.5"/>
+              <text class="bb-label" x="131" y="54" text-anchor="middle">duck</text>
+            </svg>
+            <!-- [PHOTO] drop a file named duck.jpg next to index.html and it will
+                 appear here (change the src below if you use another name or .png) -->
+            <div class="bb-photo">
+              <img src="duck.jpg" alt="A duck"
+                   onload="this.parentNode.classList.add('is-loaded')"
+                   onerror="this.style.display='none'">
+            </div>
           </div>
-          <div class="equation-caption">the functional decomposition behind my thesis</div>
+          <div class="equation-caption">Why does it say “duck”? Open the box and see which parts light up.</div>
         </div>
       </div>
     </div>
     <p class="bb-quote">“My job is to open the black-box.”</p>
 
     <p class="bio">
-      My PhD, <strong>“Functional Decompositions and Fairness of Forecasting Models”</strong>, builds on my work on black-box model interpretability through cooperative game theory and functional analysis decomposition.
+      My PhD, <strong>“Functional Decompositions and Fairness of Forecasting Models”</strong>, builds on my work on black-box model interpretability through cooperative game theory and functional analysis decomposition, and on designing fair recognition mechanisms for actuarial risk models.
       I hold an MSc in Actuarial Science from EURIA and an engineering degree in Applied Mathematics from INSA Rennes, with an exchange year at KAIST.
       This site gathers my research projects, publications, and talks.
     </p>
