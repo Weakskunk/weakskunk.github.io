@@ -10,7 +10,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body id="page-publications">
 
 <div id="cursor-dot"></div>
 <div id="cursor-trail-1"></div>
@@ -63,16 +63,16 @@
          aria-label="Open the black box for a preview of my upcoming paper">
       <div class="bb-glow"></div>
       <div class="bb-cube">
-            <div class="bb-face bb-front"></div>
-            <div class="bb-face bb-right"></div>
-            <div class="bb-face bb-left"></div>
-            <div class="bb-face bb-lid"></div>
-            <div class="bb-face bb-back"></div>
-            <div class="bb-face bb-bottom"></div>
-        </div>
+        <div class="bb-face bb-front"></div>
+        <div class="bb-face bb-right"></div>
+        <div class="bb-face bb-left"></div>
+        <div class="bb-face bb-lid"></div>
+        <div class="bb-face bb-back"></div>
+        <div class="bb-face bb-bottom"></div>
+      </div>
       <div class="bb-reveal">
         <div class="bb-teaser-label">Coming soon</div>
-        <div class="bb-teaser-title">How to enhance interpretability to ensure a black-box model is fair ?</div>
+        <div class="bb-teaser-title">Interpretability of black-box models: a review through cooperative game theory and functional decomposition</div>
         <div class="bb-teaser-sub">Working paper — UQAM</div>
       </div>
     </div>
@@ -84,7 +84,9 @@
   <div class="wrap">
     <div class="pub-list">
       <div class="pub-item">
-        <div class="pub-title">Redefining CatNat Recognition: Accurate and Fair Mechanisms for Clay Shrink-Swell Risk</div>
+        <!-- Put the PDF at papers/offroy2026-catnat-thesis.pdf (or replace the href by any URL).
+             Same pattern for every publication: wrap the title in <a href="…">…</a>. -->
+        <div class="pub-title"><a href="papers/offroy2026-catnat-thesis.pdf" target="_blank" rel="noopener noreferrer" title="Open the thesis (PDF)">Redefining CatNat Recognition: Accurate and Fair Mechanisms for Clay Shrink-Swell Risk</a></div>
         <div class="pub-meta">Offroy, L. — Actuarial thesis, EURIA, 2026</div>
         <div class="bibtex-box">
           <button class="bibtex-copy" data-copy-target="bibtex-catnat" aria-label="Copy BibTeX citation">Copy</button>
